@@ -1,0 +1,21 @@
+[
+  {
+    "email1": "mitali@test.com",
+    "pswd1": "Axis@12910",
+    "confirm1": "Axis@12910",
+
+    "email2": "mi@mi.com",
+    "pswd2": "mi",
+    "confirm2": "i",
+
+    "email3": "mi@oc",
+    "pswd3": "mi",
+    "confirm3": "mi",
+
+    "email4": "mi@oc",
+    "pswd4": "mi",
+    "confirm4": "mi"
+
+  }
+
+]

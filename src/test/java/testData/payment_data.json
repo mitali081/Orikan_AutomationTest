@@ -1,0 +1,29 @@
+[{
+  "cardHolderName1": "Mitali",
+  "cardType1": "VISA",
+  "cardNumber1": "5582900298902",
+  "cvv1": "122",
+  "cardExpiryMonth1": "January",
+  "cardExpiryYear1": "2026",
+
+  "cardHolderName2": "M",
+  "cardType2": "VISA",
+  "cardNumber2": "1",
+  "cvv2": "1",
+  "cardExpiryMonth2": "January",
+  "cardExpiryYear2": "2026",
+
+  "cardHolderName3": "Mit",
+  "cardType3": "Mastercard",
+  "cardNumber3": "558200200828",
+  "cvv3": "127",
+  "cardExpiryMonth3": "December",
+  "cardExpiryYear3": "2023",
+
+  "cardHolderName4": "M",
+  "cardType4": "Visa",
+  "cardNumber4": "55",
+  "cvv4": "1",
+  "cardExpiryMonth4": "January",
+  "cardExpiryYear4": "2026"
+}]
