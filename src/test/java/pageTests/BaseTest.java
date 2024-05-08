@@ -3,16 +3,18 @@ package pageTests;
 import base.DriverSetup;
 import org.checkerframework.checker.units.qual.C;
 import org.testng.annotations.AfterMethod;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeTest;
 import pages.*;
 
 public class BaseTest extends DriverSetup {
 
-    public RegistrationPage registrationPage;
-    public ContactPage contactPage;
-    public PaymentPage paymentPage;
-    public TermsPage termsPage;
-    public CompletePage completePage;
+    protected RegistrationPage registrationPage;
+    protected ContactPage contactPage;
+    protected PaymentPage paymentPage;
+    protected TermsPage termsPage;
+    protected CompletePage completePage;
 
     //Key for pageObject initialization
     protected String key;
@@ -22,7 +24,7 @@ public class BaseTest extends DriverSetup {
     {
         browserTypeKey = "chrome";
     }
-    @BeforeMethod(alwaysRun = true)
+    @BeforeTest(alwaysRun = true)
     public void setup()
     {
         setupDriver();
@@ -46,7 +48,7 @@ public class BaseTest extends DriverSetup {
         }
     }
 
-    @AfterMethod(alwaysRun = true)
+    @AfterTest(alwaysRun = true)
     public void tearDown()
     {
         quitDriver();

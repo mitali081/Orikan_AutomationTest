@@ -1,5 +1,9 @@
 [
   {
+    "email": "adam@orikan.com",
+    "pswd": "adam",
+    "confirm": "adam",
+
     "email1": "mitali@test.com",
     "pswd1": "Axis@12910",
     "confirm1": "Axis@12910",

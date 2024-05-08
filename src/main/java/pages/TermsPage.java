@@ -2,13 +2,15 @@ package pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 
 public class TermsPage{
-    public WebDriver driver;
+     WebDriver driver;
 
     public TermsPage(WebDriver driver) {
         this.driver=driver;
+        PageFactory.initElements(driver, this);
     }
 
     private final By termsLabel = By.xpath("//label[text()='Terms and Conditions']");

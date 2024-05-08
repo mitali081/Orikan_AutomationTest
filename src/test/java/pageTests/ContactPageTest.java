@@ -18,8 +18,7 @@ public class ContactPageTest extends BaseTest {
         key = "contactpage";
     }
 
-
-    //Working Scrnario
+    //Working Scenario
     @Test(priority = 3, description = "Verify user should not be taken to Payment page without filling any fields in Contact page")
     public void testNavToPayment_WithoutFillingContactDetails()
     {
@@ -37,11 +36,13 @@ public class ContactPageTest extends BaseTest {
     @Test(priority = 4,description = "Verify user should not be taken to payment page if even 1 mandatory field is not filled in Contact Page", dataProvider = "getContactPageData")
     public void testPasswordMismatchError(HashMap<String,String>input)
     {
-        driver.get("https://orikan-ui-automation-test.azurewebsites.net/");
-        driver.findElement(By.xpath("//input[@id='emailAddress']")).sendKeys("Test@test");
-        driver.findElement(By.xpath("//input[@id='password']")).sendKeys("Test128");
-        driver.findElement(By.xpath("//input[@id='confirmPassword']")).sendKeys("Test128");
-        driver.findElement(By.xpath("//button[contains(text(),'Next')]")).click();
+//        driver.get("https://orikan-ui-automation-test.azurewebsites.net/");
+//        driver.findElement(By.xpath("//input[@id='emailAddress']")).sendKeys("Test@test");
+//        driver.findElement(By.xpath("//input[@id='password']")).sendKeys("Test128");
+//        driver.findElement(By.xpath("//input[@id='confirmPassword']")).sendKeys("Test128");
+//        driver.findElement(By.xpath("//button[contains(text(),'Next')]")).click();
+        contactPage.page.loadRegistrationPage();
+        contactPage.page.registerUser("test@test","test","test");
         staticWait(5);
         contactPage.userContact(input.get("firstName1"),input.get("lastName1"),input.get("addressFirstLine1"),input.get("postcode1"),"",input.get("state1"));
         Boolean test4 = contactPage.checkFirstNameLabel();

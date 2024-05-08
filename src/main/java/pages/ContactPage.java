@@ -2,12 +2,13 @@ package pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.PageFactory;
 
 import static base.CommonUtilities.staticWait;
 
 public class ContactPage{
 
-    public WebDriver driver;
+     WebDriver driver;
 
     private final By firstName = By.xpath("//input[@id='firstName']");
     private final By middleName = By.xpath("//input[@id='middleName']");
@@ -20,9 +21,11 @@ public class ContactPage{
     private final By nextBtnContact = By.xpath("//button[text()='Next']");
     private final By cardHolderLabel = By.xpath("//label[text()='Card Holder Name']");
     private final By firstNameLabel = By.xpath("//label[contains(text(),'First Name')]");
+
     public ContactPage(WebDriver driver)
     {
         this.driver=driver;
+        PageFactory.initElements(driver, this);
     }
     public void setFirstName(String fName)
     {
@@ -71,6 +74,7 @@ public class ContactPage{
         return new ContactPage(driver);
     }
 
+    public RegistrationPage page = new RegistrationPage(driver);
     public String getPreferredName()
     {
         staticWait(3);

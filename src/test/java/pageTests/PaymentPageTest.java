@@ -16,7 +16,7 @@ public class PaymentPageTest extends BaseTest {
         key = "paymentpage";
     }
 
-    //Issue 3: Single digits should not be allowed in Card Number, CVV
+    //Issue 1: Single digits should not be allowed in Card Number, CVV
     @Test(priority = 5, description = "Verify that user should not be allowed to proceed if they enter single digit in the Card and CVV section",
             dataProvider = "getPaymentPageData")
     public void testPositiveRegistrationOfUser(HashMap<String,String> input)
@@ -40,7 +40,7 @@ public class PaymentPageTest extends BaseTest {
         Boolean test5 = paymentPage.getCardHolderLabel();
         Assert.assertEquals(test5, true,"User should not be allowed to proceed to terms page due to invalid cvv and card number.");
     }
-    //Issue 4: Expiry year should not be less than current year
+    //Issue 2: Expiry year should not be less than current year
     @Test(priority = 6,description = "Verify user is not allowed to provide expiry year less than current year", dataProvider = "getPaymentPageData")
     public void testPasswordMismatchError(HashMap<String,String>input)
     {

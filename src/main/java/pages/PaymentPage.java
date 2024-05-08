@@ -2,12 +2,13 @@ package pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 
 import static base.CommonUtilities.staticWait;
 
 public class PaymentPage{
-    public WebDriver driver;
+    WebDriver driver;
     private final By cardHolderName = By.xpath("//input[@id='cardHolderName']");
     private final By cardTypeVisa = By.xpath("//input[@id='cardTypeVISA']");
     private final By cardTypeMastercard = By.xpath("//input[@id='cardTypeMastercard']");
@@ -20,6 +21,7 @@ public class PaymentPage{
     public PaymentPage(WebDriver driver)
     {
         this.driver =driver;
+        PageFactory.initElements(driver, this);
 
     }
 
